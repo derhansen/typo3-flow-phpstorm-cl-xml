@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.2.xsd" name="TYPO3 Flow" invoke="./flow" alias="flow" enabled="true" version="2">
+    <command>
+        <name>help</name>
+        <params>commandidentifier[=null]</params>
+        <help><![CDATA[<h2>help</h2>
+            <p>Usage:<br>
+            help <commandidentifier>
+            </p>
+            <p>Displays help for flow or about a given command identifier</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>flow:cache:flush</name>
+        <help><![CDATA[<h2>flow:cache:flush</h2>
+            <p>Usage:<br>
+            flow:cache:flush [--force]
+            </p>
+            <p>Flush all caches</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>cache:warmup</name>
+        <help><![CDATA[<h2>cache:warmup</h2>
+            <p>Usage:<br>
+            cache:warmup
+            </p>
+            <p>Warm up caches</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>configuration:show</name>
+        <help><![CDATA[<h2>configuration:show</h2>
+            <p>Usage:<br>
+            configuration:show [--type] [--path]
+            </p>
+            <p>Show the active configuration settings</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>configuration:validate</name>
+        <help><![CDATA[<h2>configuration:validate</h2>
+            <p>Usage:<br>
+            configuration:validate  [--type] [--path]
+            </p>
+            <p>Validate the given configuration</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>configuration:generateschema</name>
+        <help><![CDATA[<h2>configuration:generateschema</h2>
+            <p>Usage:<br>
+            configuration:generateschema [--type] [--path]
+            </p>
+            <p>Generate a schema for the given configuration or YAML file.</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>flow:core:setfilepermissions</name>
+        <params>commandline-user[=null] webserver-user[=null] webserver-group[=null]</params>
+        <help><![CDATA[<h2>flow:core:setfilepermissions</h2>
+            <p>Usage:<br>
+            flow:core:setfilepermissions 'commandline user' 'webserver user' 'webserver group'
+            </p>
+            <p>Adjust file permissions for CLI and web server access</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>flow:core:migrate</name>
+        <help><![CDATA[<h2>flow:core:migrate</h2>
+            <p>Usage:<br>
+            flow:core:migrate [--status] [--packages-path] [--package-key]
+            </p>
+            <p>Migrate source files as needed</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>flow:core:shell</name>
+        <help><![CDATA[<h2>flow:core:shell</h2>
+            <p>Usage:<br>
+            flow:core:shell
+            </p>
+            <p>Run the interactive Shell</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:validate</name>
+        <help><![CDATA[<h2>doctrine:validate</h2>
+            <p>Usage:<br>
+            doctrine:validate
+            </p>
+            <p>Validate the class/table mappings</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:create</name>
+        <help><![CDATA[<h2>doctrine:create</h2>
+            <p>Usage:<br>
+            doctrine:create [--output]
+            </p>
+            <p>Create the database schema</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:update</name>
+        <help><![CDATA[<h2>doctrine:update</h2>
+            <p>Usage:<br>
+            doctrine:update [--unsafe-mode] [--output]
+            </p>
+            <p>Update the database schema</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:entitystatus</name>
+        <help><![CDATA[<h2>doctrine:entitystatus</h2>
+            <p>Usage:<br>
+            doctrine:entitystatus [--dump-mapping-data]
+            </p>
+            <p>Show the current status of entities and mappings</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:dql</name>
+        <help><![CDATA[<h2>doctrine:dql</h2>
+            <p>Usage:<br>
+            doctrine:dql [--depth] [--hydration-mode] [--offset] [--limit]
+            </p>
+            <p>Run arbitrary DQL and display results</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:migrationstatus</name>
+        <help><![CDATA[<h2>doctrine:migrationstatus</h2>
+            <p>Usage:<br>
+            doctrine:migrationstatus
+            </p>
+            <p>Show the current migration status</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:migrate</name>
+        <help><![CDATA[<h2>doctrine:migrate</h2>
+            <p>Usage:<br>
+            doctrine:migrate [--version] [--output] [--dry-run] [--quiet]
+            </p>
+            <p>Migrate the database schema</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:migrationexecute</name>
+        <help><![CDATA[<h2>doctrine:migrationexecute</h2>
+            <p>Usage:<br>
+            doctrine:migrationexecute [--direction] [--output] [--dry-run]
+            </p>
+            <p>Execute a single migration</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:migrationversion</name>
+        <help><![CDATA[<h2>doctrine:migrationversion</h2>
+            <p>Usage:<br>
+            doctrine:migrationversion [--add] [--delete]
+            </p>
+            <p>Mark/unmark a migration as migrated</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>doctrine:migrationgenerate</name>
+        <help><![CDATA[<h2>doctrine:migrationgenerate</h2>
+            <p>Usage:<br>
+            doctrine:migrationgenerate [--diff-against-current]
+            </p>
+            <p>Generate a new migration</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>package:create</name>
+        <params>package-key</params>
+        <help><![CDATA[<h2>package:create</h2>
+            <p>Usage:<br>
+            package:create <package key>
+            </p>
+            <p>Create a new package</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>package:delete</name>
+        <params>package-key</params>
+        <help><![CDATA[<h2>package:delete</h2>
+            <p>Usage:<br>
+            package:delete <package key>
+            </p>
+            <p>Delete an existing package</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>package:activate</name>
+        <params>package-key</params>
+        <help><![CDATA[<h2>package:activate</h2>
+            <p>Usage:<br>
+            package:activate <package key>
+            </p>
+            <p>Activate an available package</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>package:deactivate</name>
+        <params>package-key</params>
+        <help><![CDATA[<h2>package:deactivate</h2>
+            <p>Usage:<br>
+            package:deactivate <package key>
+            </p>
+            <p>Deactivate a package</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>package:list</name>
+        <help><![CDATA[<h2>package:list</h2>
+            <p>Usage:<br>
+            package:list
+            </p>
+            <p>List available packages</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>package:freeze</name>
+        <params>package-key</params>
+        <help><![CDATA[<h2>package:freeze</h2>
+            <p>Usage:<br>
+            package:freeze <package key>
+            </p>
+            <p>Freeze a package</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>package:unfreeze</name>
+        <params>package-key</params>
+        <help><![CDATA[<h2>package:unfreeze</h2>
+            <p>Usage:<br>
+            package:unfreeze <package key>
+            </p>
+            <p>Unfreeze a package</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>package:refreeze</name>
+        <params>package-key</params>
+        <help><![CDATA[<h2>package:refreeze</h2>
+            <p>Usage:<br>
+            package:refreeze <package key>
+            </p>
+            <p>Refreeze a package</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>routing:list</name>
+        <help><![CDATA[<h2>routing:list</h2>
+            <p>Usage:<br>
+            routing:list
+            </p>
+            <p>List the known routes</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>routing:show</name>
+        <help><![CDATA[<h2>routing:show</h2>
+            <p>Usage:<br>
+            routing:show [--index]
+            </p>
+            <p>Show informations for a route</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>routing:getpath</name>
+        <params>package</params>
+        <help><![CDATA[<h2>routing:getpath</h2>
+            <p>Usage:<br>
+            routing:getpath [--controller] [--action] [--format] <package>
+            </p>
+            <p>Generate a route path</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>routing:routepath</name>
+        <params>path</params>
+        <help><![CDATA[<h2>routing:routepath</h2>
+            <p>Usage:<br>
+            routing:routepath
+            </p>
+            <p>Route the given route path</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>security:importpublickey</name>
+        <help><![CDATA[<h2>security:importpublickey</h2>
+            <p>Usage:<br>
+            security:importpublickey
+            </p>
+            <p>Import a public key</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>security:importprivatekey</name>
+        <help><![CDATA[<h2>security:importprivatekey</h2>
+            <p>Usage:<br>
+            security:importprivatekey [--used-for-passwords]
+            </p>
+            <p>Import a private key</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>documentation:generatexsd</name>
+        <params>php-namespace</params>
+        <help><![CDATA[<h2>documentation:generatexsd</h2>
+            <p>Usage:<br>
+            documentation:generatexsd [--xsd-namespace] [--target-file] <php namespace>
+            </p>
+            <p>Generate Fluid ViewHelper XSD Schema</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>kickstart:package</name>
+        <params>package-key</params>
+        <help><![CDATA[<h2>kickstart:package</h2>
+            <p>Usage:<br>
+            kickstart:package <package key>
+            </p>
+            <p>Kickstart a new package</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>kickstart:actioncontroller</name>
+        <params>package-key controller-name</params>
+        <help><![CDATA[<h2>kickstart:actioncontroller</h2>
+            <p>Usage:<br>
+            kickstart:actioncontroller [--generate-actions] [--generate-templates] [--generate-related] [--force] <package key> <controller name>
+            </p>
+            <p>Kickstart a new action controller</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>kickstart:commandcontroller</name>
+        <params>package-key controller-name</params>
+        <help><![CDATA[<h2>kickstart:commandcontroller</h2>
+            <p>Usage:<br>
+            kickstart:commandcontroller [--force] <package key> <controller name>
+            </p>
+            <p>Kickstart a new command controller</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>kickstart:model</name>
+        <params>package-key model-name</params>
+        <help><![CDATA[<h2>kickstart:model</h2>
+            <p>Usage:<br>
+            kickstart:model [--force] <package key> <model name>
+            </p>
+            <p>Kickstart a new domain model</p>
+        ]]></help>
+    </command>
+    <command>
+        <name>kickstart:repository</name>
+        <params>package-key repository-name</params>
+        <help><![CDATA[<h2>kickstart:repository</h2>
+            <p>Usage:<br>
+            kickstart:repository [--force] <package key> <repository name>
+            </p>
+            <p>Kickstart a new domain repository</p>
+        ]]></help>
+    </command>
+    <help><![CDATA[
+        <p>Usage:<br>
+        flow <command identifier>
+        </p>
+        <p>
+        See "flow help" for a list of all available commands.
+        </p>
+    ]]></help>
+</framework>
+
