@@ -1,0 +1,13 @@
+Configuration:
+
+1. Navigate to Settings | Command Line Tool Support and add custom configuration
+2. Add the Framework Name (e.g. "TYPO3 Flow"), the Tool path (e.g. "./flow") and the Alias (e.g. "flow")
+3. Import the XML configuration file available here: https://github.com/derhansen/typo3-flow-phpstorm-cl-xml
+
+Be sure to check, that the Tool path doesn't contain an absolute path to the flow executable.
+
+How to use it?
+
+1. Open a TYPO3 Flow project in PhpStorm and press CTRL + SHIFT + X
+2. Check, that the current directory contains the TYPO3 Flow executable (in Linux systems you can use pwd to check the current directory)
+3. Enter a TYPO3 Flow command by using the alias defined in the configuration (in this example "flow")
