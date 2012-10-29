@@ -9,5 +9,5 @@ Be sure to check, that the Tool path doesn't contain an absolute path to the flo
 How to use it?
 
 1. Open a TYPO3 Flow project in PhpStorm and press CTRL + SHIFT + X
-2. Check, that the current directory contains the TYPO3 Flow executable (in Linux systems you can use pwd to check the current directory)
+2. Check, that the current directory contains the TYPO3 Flow executable (in Linux systems you can use pwd to check the current directory) If not, navigate to that directory.
 3. Enter a TYPO3 Flow command by using the alias defined in the configuration (in this example "flow")
